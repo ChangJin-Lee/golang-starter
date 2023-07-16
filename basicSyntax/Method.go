@@ -23,8 +23,19 @@ func (r Rect) area() int {
 	return r.width * r.height
 }
 
+// pointer Receiver
+func (r *Rect) area2() int {
+	r.width++
+	return r.width * r.height
+}
+
 func main() {
 	rect := Rect{10, 20}
 	area := rect.area() // call method
+
+	rect2 := Rect{10, 20}
+	area2 := rect2.area2()
+
 	fmt.Println(area)
+	fmt.Println(rect2.width, area2)
 }
