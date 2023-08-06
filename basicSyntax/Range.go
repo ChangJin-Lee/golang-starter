@@ -1,3 +1,4 @@
+// range는 다양한 데이터의 iterators입니다. 
 package main
 
 import "fmt"
