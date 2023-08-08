@@ -84,3 +84,28 @@ func main() {
     println(rect.width, area) // 11 220 출력
 }
 ```
+
+6. Multiple Return Values
+- 여러 개의 return value가 가능함.
+- 파이썬과 유사하고 인덱스 접근도 비슷하게 가능
+
+```go
+func getInitials(n string) (string, string) {
+	// 배열을 받아오는거라 스트링 char들을 접근함.
+	s := strings.ToUpper(n)
+	// " "를 기준으로 Split함. ["I", "AM", "CJ"]
+	names := strings.Split(s, " ")
+
+	var initials []string
+	for _, v := range names {
+		initials = append(initials, v[:1])
+	}
+
+	// initials의 사이즈를 확인함
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+
+	return initials[0], "_"
+}
+```
