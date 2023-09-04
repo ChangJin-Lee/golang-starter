@@ -109,3 +109,7 @@ func getInitials(n string) (string, string) {
 	return initials[0], "_"
 }
 ```
+
+## Defer
+
+- defer는 함수 앞에 쓰이는 키워드로써 특정 문장 혹은 함수를 감싸고 있는 함수 내에서 제일 나중에, 끝나기 직전에 실행하게 하는 용법입니다
